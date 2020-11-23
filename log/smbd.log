@@ -1,0 +1,183 @@
+smbd version 4.12.9 started.
+Copyright Andrew Tridgell and the Samba Team 1992-2020
+uid=0 gid=0 euid=0 egid=0
+lp_load_ex: refreshing parameters
+Initialising global parameters
+Processing section "[global]"
+Registered MSG_REQ_POOL_USAGE
+Registered MSG_REQ_DMALLOC_MARK and LOG_CHANGED
+lp_load_ex: refreshing parameters
+Initialising global parameters
+Processing section "[global]"
+Processing section "[Public]"
+adding IPC service
+added interface eth0 ip=172.17.0.2 bcast=172.17.255.255 netmask=255.255.0.0
+loaded services
+INFO: Profiling support unavailable in this build.
+Registered MSG_REQ_POOL_USAGE
+No builtin backend found, trying to load plugin
+load_module_absolute_path: Module '/usr/lib/samba/pdb/tdbsam.so' loaded
+tdb(/var/lib/samba/registry.tdb): tdb_open_ex: could not open file /var/lib/samba/registry.tdb: No such file or directory
+Could not open tdb: No such file or directory
+Failed to fetch domain sid for WORKGROUP
+tdb(/var/lib/samba/account_policy.tdb): tdb_open_ex: could not open file /var/lib/samba/account_policy.tdb: No such file or directory
+Could not open tdb: No such file or directory
+account_policy_get: tdb_fetch_uint32_t failed for type 1 (min password length), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 2 (password history), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 3 (user must logon to change password), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 4 (maximum password age), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 5 (minimum password age), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 6 (lockout duration), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 7 (reset count minutes), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 8 (bad lockout attempt), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 9 (disconnect time), returning 0
+account_policy_get: tdb_fetch_uint32_t failed for type 10 (refuse machine password change), returning 0
+tdbsam_open: Converting version 0.0 database to version 4.0.
+tdbsam_convert_backup: updated /var/lib/samba/private/passdb.tdb file.
+tdb(/var/lib/samba/winbindd_idmap.tdb): tdb_open_ex: could not open file /var/lib/samba/winbindd_idmap.tdb: No such file or directory
+TDBSAM converted successfully.
+Initialise the svcctl registry keys if needed.
+Initialise the eventlog registry keys if needed.
+register_rpc_module: Successfully added RPC module 'mdssvc'
+reloading printcap cache
+reload status: ok
+Registered MSG_REQ_POOL_USAGE
+Unable to connect to CUPS server localhost:631 - Bad file descriptor
+reloading printcap cache
+cups_pcap_load_async: already waiting for a refresh event
+reload status: error
+waiting for connections
+Could not find child 7 -- ignoring
+failed to retrieve printer list: NT_STATUS_UNSUCCESSFUL
+Registered MSG_REQ_POOL_USAGE
+Allowed connection from 192.168.4.19 (192.168.4.19)
+init_oplocks: initializing messages.
+Transaction 0 of length 73 (0 toread)
+switch message SMBnegprot (pid 1) conn 0x0
+Requested protocol [NT LM 0.12]
+Requested protocol [SMB 2.002]
+Requested protocol [SMB 2.???]
+Selected protocol SMB2_FF
+GENSEC backend 'gssapi_spnego' registered
+GENSEC backend 'gssapi_krb5' registered
+GENSEC backend 'gssapi_krb5_sasl' registered
+GENSEC backend 'spnego' registered
+GENSEC backend 'schannel' registered
+GENSEC backend 'naclrpc_as_system' registered
+GENSEC backend 'sasl-EXTERNAL' registered
+GENSEC backend 'ntlmssp' registered
+GENSEC backend 'ntlmssp_resume_ccache' registered
+GENSEC backend 'http_basic' registered
+GENSEC backend 'http_ntlm' registered
+GENSEC backend 'http_negotiate' registered
+Selected protocol SMB 2.???
+Selected protocol SMB3_11
+Got NTLMSSP neg_flags=0xe2088297
+Got user=[Veronica] domain=[VERO-VIRT-PC] workstation=[VERO-VIRT-PC] len1=24 len2=244
+lp_load_ex: refreshing parameters
+Initialising global parameters
+Processing section "[global]"
+Processing section "[Public]"
+adding IPC service
+check_ntlm_password:  Checking password for unmapped user [VERO-VIRT-PC]\[Veronica]@[VERO-VIRT-PC] with the new password interface
+check_ntlm_password:  mapped user is: [VERO-VIRT-PC]\[Veronica]@[VERO-VIRT-PC]
+check_sam_security: Couldn't find user 'Veronica' in passdb.
+check_ntlm_password:  Authentication for user [Veronica] -> [Veronica] FAILED with error NT_STATUS_NO_SUCH_USER, authoritative=1
+Auth: [SMB2,(null)] user [VERO-VIRT-PC]\[Veronica] at [Sun, 22 Nov 2020 15:01:40.245435 UTC] with [NTLMv2] status [NT_STATUS_NO_SUCH_USER] workstation [VERO-VIRT-PC] remote host [ipv4:192.168.4.19:55657] mapped to [VERO-VIRT-PC]\[Veronica]. local host [ipv4:172.17.0.2:445] 
+{"timestamp": "2020-11-22T15:01:40.245548+0000", "type": "Authentication", "Authentication": {"version": {"major": 1, "minor": 2}, "eventId": 4625, "logonId": "0", "logonType": 3, "status": "NT_STATUS_NO_SUCH_USER", "localAddress": "ipv4:172.17.0.2:445", "remoteAddress": "ipv4:192.168.4.19:55657", "serviceDescription": "SMB2", "authDescription": null, "clientDomain": "VERO-VIRT-PC", "clientAccount": "Veronica", "workstation": "VERO-VIRT-PC", "becameAccount": null, "becameDomain": null, "becameSid": null, "mappedAccount": "Veronica", "mappedDomain": "VERO-VIRT-PC", "netlogonComputer": null, "netlogonTrustAccount": null, "netlogonNegotiateFlags": "0x00000000", "netlogonSecureChannelType": 0, "netlogonTrustAccountSid": null, "passwordType": "NTLMv2", "duration": 3165}}
+No such user Veronica [VERO-VIRT-PC] - using guest account
+Allowed connection from 192.168.4.19 (192.168.4.19)
+make_connection_snum: Connect path is '/tmp' for service [IPC$]
+Initialising default vfs hooks
+Initialising custom vfs hooks from [/[Default VFS]/]
+vero-virt-pc (ipv4:192.168.4.19:55657) connect to service IPC$ initially as user nobody (uid=65534, gid=65534) (pid 1)
+api_pipe_bind_req: wkssvc -> wkssvc rpc service
+check_bind_req for wkssvc context_id=0
+check_bind_req: wkssvc -> wkssvc rpc service
+api_rpcTNP: rpc command: WKSSVC_NETWKSTAGETINFO
+api_pipe_bind_req: srvsvc -> srvsvc rpc service
+check_bind_req for srvsvc context_id=0
+check_bind_req: srvsvc -> srvsvc rpc service
+api_rpcTNP: rpc command: SRVSVC_NETSRVGETINFO
+api_pipe_bind_req: wkssvc -> wkssvc rpc service
+check_bind_req for wkssvc context_id=0
+check_bind_req: wkssvc -> wkssvc rpc service
+api_rpcTNP: rpc command: WKSSVC_NETWKSTAGETINFO
+api_pipe_bind_req: srvsvc -> srvsvc rpc service
+check_bind_req for srvsvc context_id=0
+check_bind_req: srvsvc -> srvsvc rpc service
+api_rpcTNP: rpc command: SRVSVC_NETSRVGETINFO
+api_pipe_bind_req: srvsvc -> srvsvc rpc service
+check_bind_req for srvsvc context_id=0
+check_bind_req: srvsvc -> srvsvc rpc service
+api_rpcTNP: rpc command: SRVSVC_NETSHAREENUMALL
+Failed to fetch record!
+pcap cache not loaded
+get_referred_path: |public| in dfs path \192.168.4.18\public is not a dfs root.
+smbd_smb2_request_error_ex: smbd_smb2_request_error_ex: idx[1] status[NT_STATUS_NOT_FOUND] || at ../../source3/smbd/smb2_ioctl.c:312
+Allowed connection from 192.168.4.19 (192.168.4.19)
+idmap range not specified for domain '*'
+Failed to fetch domain sid for WORKGROUP
+Forced user nobody
+make_connection_snum: Connect path is '/public' for service [Public]
+Initialising default vfs hooks
+Initialising custom vfs hooks from [/[Default VFS]/]
+vero-virt-pc (ipv4:192.168.4.19:55657) connect to service Public initially as user nobody (uid=65534, gid=65534) (pid 1)
+api_pipe_bind_req: srvsvc -> srvsvc rpc service
+check_bind_req for srvsvc context_id=0
+check_bind_req: srvsvc -> srvsvc rpc service
+api_rpcTNP: rpc command: SRVSVC_NETSHAREGETINFO
+smbd_smb2_request_error_ex: smbd_smb2_request_error_ex: idx[1] status[NT_STATUS_OBJECT_NAME_NOT_FOUND] || at ../../source3/smbd/smb2_create.c:334
+smbd_dirptr_get_entry mask=[*] found . fname=. (.)
+smbd_dirptr_get_entry mask=[*] found .. fname=.. (..)
+smbd_smb2_request_error_ex: smbd_smb2_request_error_ex: idx[9] status[STATUS_NO_MORE_FILES] || at ../../source3/smbd/smb2_query_directory.c:159
+smbd_smb2_notify_send: notify change called on ., filter = DIR_NAME, recursive = 0
+smbd_smb2_notify_send: notify change called on ., filter = FILE_NAME|ATTRIBUTES|LAST_WRITE, recursive = 0
+nobody opened file Новый текстовый документ.txt read=Yes write=Yes (numopen=3)
+smbd_do_setfilepathinfo: Новый текстовый документ.txt (fnum 1682241509) info_level=1019 totdata=8
+smbd_do_qfsinfo: level = 1001
+smbd_do_qfsinfo: level = 1005
+smbd_dirptr_get_entry mask=[*] found . fname=. (.)
+smbd_dirptr_get_entry mask=[*] found .. fname=.. (..)
+smbd_dirptr_get_entry mask=[*] found Новый текстовый документ.txt fname=Новый текстовый документ.txt (Новый текстовый документ.txt)
+smbd_smb2_request_error_ex: smbd_smb2_request_error_ex: idx[9] status[STATUS_NO_MORE_FILES] || at ../../source3/smbd/smb2_query_directory.c:159
+smbd_do_qfsinfo: level = 1008
+nobody opened file Новый текстовый документ.txt read=No write=No (numopen=5)
+smbd_do_qfsinfo: level = 1008
+nobody closed file Новый текстовый документ.txt (numopen=4) NT_STATUS_OK
+nobody opened file Новый текстовый документ.txt read=No write=No (numopen=5)
+smbd_do_qfsinfo: level = 1008
+nobody closed file Новый текстовый документ.txt (numopen=4) NT_STATUS_OK
+smbd_dirptr_get_entry mask=[*] found . fname=. (.)
+smbd_dirptr_get_entry mask=[*] found .. fname=.. (..)
+smbd_dirptr_get_entry mask=[*] found Новый текстовый документ.txt fname=Новый текстовый документ.txt (Новый текстовый документ.txt)
+smbd_smb2_request_error_ex: smbd_smb2_request_error_ex: idx[5] status[STATUS_NO_MORE_FILES] || at ../../source3/smbd/smb2_query_directory.c:159
+nobody opened file Новый текстовый документ.txt read=No write=No (numopen=5)
+smbd_do_qfsinfo: level = 1008
+nobody closed file Новый текстовый документ.txt (numopen=4) NT_STATUS_OK
+smbd_do_qfsinfo: level = 1008
+Got NTLMSSP neg_flags=0xe2088297
+Got user=[] domain=[] workstation=[VERO-VIRT-PC] len1=1 len2=0
+lp_load_ex: refreshing parameters
+Initialising global parameters
+Processing section "[global]"
+Processing section "[Public]"
+adding IPC service
+check_ntlm_password:  Checking password for unmapped user []\[]@[VERO-VIRT-PC] with the new password interface
+check_ntlm_password:  mapped user is: []\[]@[VERO-VIRT-PC]
+auth_check_ntlm_password: anonymous authentication for user [] succeeded
+Auth: [SMB2,(null)] user []\[] at [Sun, 22 Nov 2020 15:01:48.136756 UTC] with [(null)] status [NT_STATUS_OK] workstation [VERO-VIRT-PC] remote host [ipv4:192.168.4.19:55657] became [SAMBA]\[nobody] [S-1-5-21-4061701436-2876334726-3533912459-501]. local host [ipv4:172.17.0.2:445] 
+{"timestamp": "2020-11-22T15:01:48.136818+0000", "type": "Authentication", "Authentication": {"version": {"major": 1, "minor": 2}, "eventId": 4624, "logonId": "0", "logonType": 3, "status": "NT_STATUS_OK", "localAddress": "ipv4:172.17.0.2:445", "remoteAddress": "ipv4:192.168.4.19:55657", "serviceDescription": "SMB2", "authDescription": null, "clientDomain": "", "clientAccount": "", "workstation": "VERO-VIRT-PC", "becameAccount": "nobody", "becameDomain": "SAMBA", "becameSid": "S-1-5-21-4061701436-2876334726-3533912459-501", "mappedAccount": "", "mappedDomain": "", "netlogonComputer": null, "netlogonTrustAccount": null, "netlogonNegotiateFlags": "0x00000000", "netlogonSecureChannelType": 0, "netlogonTrustAccountSid": null, "passwordType": null, "duration": 1702}}
+Allowed connection from 192.168.4.19 (192.168.4.19)
+idmap range not specified for domain '*'
+Failed to fetch domain sid for WORKGROUP
+Forced user nobody
+make_connection_snum: Connect path is '/public' for service [Public]
+Initialising default vfs hooks
+Initialising custom vfs hooks from [/[Default VFS]/]
+vero-virt-pc (ipv4:192.168.4.19:55657) connect to service Public initially as user nobody (uid=65534, gid=65534) (pid 1)
+nobody opened file Новый текстовый документ.txt read=No write=No (numopen=1)
+nobody closed file Новый текстовый документ.txt (numopen=0) NT_STATUS_OK
+vero-virt-pc (ipv4:192.168.4.19:55657) closed connection to service IPC$
+nobody closed file Новый текстовый документ.txt (numopen=3) NT_STATUS_OK
+vero-virt-pc (ipv4:192.168.4.19:55657) closed connection to service Public
